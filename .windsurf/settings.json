@@ -1,0 +1,41 @@
+{
+  "name": "ExzosOS Development",
+  "remote.SSH.defaultHost": "exzos-dev",
+  "remote.SSH.configFile": "~/.ssh/config",
+  "remote.SSH.path": "/usr/bin/ssh",
+  "remote.SSH.remotePlatform": {
+    "exzos-dev": "linux"
+  },
+  "remote.autoForwardPorts": true,
+  "remote.forwardPorts": [
+    3000,
+    3001,
+    5173,
+    8080,
+    8081
+  ],
+  "remote.restoreForwardedPorts": true,
+  "workbench.colorTheme": "Windsurf Dark",
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "terminal.integrated.fontSize": 13,
+  "extensions.autoUpdate": true,
+  "git.autofetch": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.enable": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  }
+}

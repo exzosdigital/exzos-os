@@ -1,0 +1,25 @@
+{
+  "remoteSettings": {
+    "host": "35.225.93.223",
+    "username": "will",
+    "sshKeyPath": "~/.ssh/id_ed25519",
+    "workspaceRoot": "/home/will/exzos-os",
+    "synchronization": {
+      "ignore": [
+        "node_modules",
+        "dist",
+        ".turbo",
+        "*.log"
+      ],
+      "watchPatterns": [
+        "src/**/*",
+        "packages/**/*"
+      ]
+    },
+    "ports": {
+      "zed": 3000,
+      "cursor": 3001,
+      "windsurf": 3002
+    }
+  }
+}

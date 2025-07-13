@@ -1,10 +1,10 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
-  "pipeline": {
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "build/**"]
     },
     "lint": {},
     "dev": {
@@ -12,6 +12,28 @@
       "persistent": true
     },
     "clean": {
+      "cache": false
+    },
+    "comet:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "pulsar:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "nexus:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "verse:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "core:up": {
+      "cache": false
+    },
+    "core:down": {
       "cache": false
     }
   }

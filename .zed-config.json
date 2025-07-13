@@ -1,0 +1,23 @@
+{
+  "name": "ExzosOS Development",
+  "remote": {
+    "host": "35.225.93.223",
+    "port": 22,
+    "username": "willrulli",
+    "key": "~/.ssh/id_ed25519_exzos",
+    "path": "/home/willrulli/projects/exzos-os"
+  },
+  "extensions": [
+    "typescript",
+    "rust",
+    "git",
+    "prettier"
+  ],
+  "settings": {
+    "theme": "dark",
+    "font_size": 14,
+    "tab_size": 2,
+    "soft_wrap": true,
+    "format_on_save": true
+  }
+}

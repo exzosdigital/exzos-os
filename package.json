@@ -2,11 +2,18 @@
   "name": "exzos-os",
   "version": "0.1.0",
   "private": true,
-  "description": "ExzosOS - Operating System Framework",
+  "description": "🌌 ExzosSphere - SaaS Development Framework & Cosmic Ecosystem",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "infrastructure/*",
+    "assets/*",
+    "docs/*"
   ],
   "scripts": {
+    "remote:setup": "./scripts/setup-remote.sh",
+    "remote:start": "mutagen sync resume exzos-remote",
+    "remote:stop": "mutagen sync pause exzos-remote",
+    "remote:status": "mutagen sync list",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",

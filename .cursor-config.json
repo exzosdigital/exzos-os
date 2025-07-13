@@ -1,0 +1,30 @@
+{
+  "name": "ExzosOS Development",
+  "remote": {
+    "host": "35.225.93.223",
+    "port": 22,
+    "username": "willrulli",
+    "identityFile": "~/.ssh/id_ed25519_exzos",
+    "workspaceRoot": "/home/willrulli/projects/exzos-os"
+  },
+  "forwardPorts": [
+    3000,
+    8080,
+    8081,
+    5173
+  ],
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "prisma.prisma"
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always"
+  }
+}

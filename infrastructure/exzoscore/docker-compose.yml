@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  casaos:
+    image: lscr.io/linuxserver/casaos:latest
+    container_name: casaos
+    privileged: true
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /DATA/AppData/casaos:/data
+    networks:
+      - exzos_network
+
+  branding-server:
+    image: nginx:alpine
+    container_name: branding-server
+    restart: unless-stopped
+    volumes:
+      - ./branding/public:/usr/share/nginx/html:ro
+      - ./branding/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - exzos_network
+
+networks:
+  exzos_network:
+    driver: bridge

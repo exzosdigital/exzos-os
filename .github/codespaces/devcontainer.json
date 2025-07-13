@@ -1,0 +1,95 @@
+{
+  "name": "ExzosOS Codespace",
+  "dockerFile": "../../.devcontainer/Dockerfile",
+  "context": "../..",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "username": "codespace",
+      "userUid": "automatic",
+      "userGid": "automatic"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "ppa": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "installDirectlyFromGitHubRelease": true,
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "prisma.prisma",
+        "ms-vscode.vscode-json",
+        "github.copilot",
+        "eamodio.gitlens",
+        "usernamehw.errorlens",
+        "ms-vscode.live-server",
+        "ms-vscode.vscode-thunder-client"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+        },
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "git.autofetch": true,
+        "git.enableSmartCommit": true,
+        "editor.wordWrap": "on",
+        "editor.minimap.enabled": false,
+        "workbench.colorTheme": "GitHub Dark",
+        "editor.fontSize": 14,
+        "terminal.integrated.fontSize": 13,
+        "codespace.experimental.prebuilds": true
+      }
+    },
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "package.json"
+      ]
+    }
+  },
+  "forwardPorts": [3000, 3001, 5173, 8080, 8081, 5432],
+  "portsAttributes": {
+    "3000": {
+      "label": "ExzosOS Main App",
+      "onAutoForward": "openBrowser"
+    },
+    "3001": {
+      "label": "ExzosNexus",
+      "onAutoForward": "notify"
+    },
+    "5173": {
+      "label": "Vite Dev Server",
+      "onAutoForward": "openBrowser"
+    },
+    "8080": {
+      "label": "API Server",
+      "onAutoForward": "notify"
+    },
+    "8081": {
+      "label": "Admin Panel",
+      "onAutoForward": "notify"
+    },
+    "5432": {
+      "label": "PostgreSQL",
+      "onAutoForward": "ignore"
+    }
+  },
+  "onCreateCommand": "echo 'Setting up ExzosOS development environment...'",
+  "postCreateCommand": "yarn install && git submodule update --init --recursive",
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && echo '🚀 ExzosOS development environment ready!'",
+  "remoteUser": "codespace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "shutdownAction": "stopContainer"
+}

@@ -1,0 +1,6 @@
+[submodule "packages/exzosnexus"]
+	path = packages/exzosnexus
+	url = git@github-exzos:exzosdigital/exzosnexus.git
+[submodule "packages/exzosverse"]
+	path = packages/exzosverse
+	url = git@github-exzos:exzosdigital/exzosverse.git

@@ -1,0 +1,13 @@
+:root {
+  /* Official Branding Colors */
+  --black: #0A0A0A;
+  --off-white: #EDEDED;
+
+  /* Semantic Colors */
+  --background-primary: var(--black);
+  --background-secondary: #1A1A1A;
+  --text-primary: var(--off-white);
+  --text-secondary: #A9A9A9;
+  --accent-primary: var(--off-white);
+  --border-color: #333333;
+}

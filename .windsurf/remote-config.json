@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "remoteConnections": [
+    {
+      "name": "ExzosOS Remote",
+      "type": "ssh",
+      "host": "35.225.93.223",
+      "port": 22,
+      "username": "willrulli",
+      "privateKey": "~/.ssh/id_ed25519_exzos",
+      "workspaceFolder": "/home/willrulli/projects/exzos-os",
+      "forwardAgent": true,
+      "mutagen": {
+        "enabled": true,
+        "alpha": ".",
+        "beta": "exzos-dev.local:/home/willrulli/projects/exzos-os",
+        "mode": "two-way-resolved",
+        "ignore": {
+          "paths": [
+            "node_modules",
+            ".git",
+            "dist",
+            ".next",
+            ".turbo",
+            "*.log"
+          ]
+        }
+      }
+    }
+  ],
+  "defaultExtensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "prisma.prisma",
+    "ms-vscode.vscode-typescript-next",
+    "github.copilot",
+    "eamodio.gitlens",
+    "usernamehw.errorlens"
+  ]
+}

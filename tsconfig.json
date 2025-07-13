@@ -8,8 +8,15 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "rootDir": "./src"
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["packages/*/src"],
+      "@shared/*": ["packages/shared/src/*"],
+      "@apps/*": ["apps/*/src/*"]
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.test.ts"]
+  "include": ["packages/**/*", "apps/**/*", "*.ts", "*.js"],
+  "exclude": ["node_modules", "**/dist", "**/*.test.ts", "**/.next"]
 }
